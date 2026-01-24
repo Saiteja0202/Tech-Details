@@ -1,0 +1,43 @@
+DBMS (Database Management System) is a software system that manages, stores, and retrieves data efficiently in a structured format. DBMS acts as a bridge between a central database and multiple clients including apps and users.
+Relational Database Management System (RDBMS), NoSQL DBMS, Object-Oriented DBMS (OODBMS), Hierarchical Database,  Network Database, Cloud-Based Database.
+Database languages -> are specialized sets of commands and instructions used to define, manipulate and control data within a database.
+Data Definition Language(DDL) -> which deals with database schemas and descriptions, of how the data should reside in the database.
+Data Manipulation Language (DML) -> focuses on manipulating the data stored in the database, enabling users to retrieve, add, update and delete data.
+Data Control Language(DCL) -> commands manage access permissions, ensuring data security by controlling who can perform certain actions on the database.
+Transaction COntrol Language(TCL) -> commands oversee transactional data to maintain consistency, reliability and atomicity.
+Data Query Language(DQL) -> is a subset of SQL used to retrieve data from a database without modifying it.
+A DBMS architecture defines how users interact with the database to read, write, or update information.
+1-tier, 2-tier, 3-tier Architecture
+Entity-Relationship Model (ER Model) is a conceptual model for designing a database. This model represents the logical structure of a database, including entities, their attributes, and relationships between them. ER diagrams represent the E-R model in a database, making them easy to convert into relations (tables).
+Entity -> represents a real-world object, concept or thing about which data is stored in a database. It act as a building block of a database. Tables in relational database represent these entities. Strong Entity (primary key), Weak Entity(no primary key).
+Attributes -> are the properties that define the entity type. Key Attribute(Primary key), Composite Attribute(composed of many other attributes), Multivalued Attribute(an attribute can have multiple values), Derived Attribute(An attribute that can be derived from other attributes of the entity type).
+Relationship Type represents the association between entity types.
+Degree of a Relationship Set -> The number of different entity sets participating in a relationship set. Unary/Recursive Relationship, Binary Relationship,
+Ternary Relationship, N-ary Relationship.
+Cardinality -> The maximum number of times an entity of an entity set participates in a relationship set. One-to-One, One-to-Many, Many-to-One, Many-to-Many
+Participation Constraint is applied to the entity participating in the relationship set. Total Participation, Partial Participation.
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+									PL/SQL
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+PL/SQL, which stands for Procedural Language extensions to the Structured Query Language (SQL).
+Blocks -> Anonymous Blocks and Named Blocks
+Declaration Section -> DECLARE
+Executable Section -> BEGIN - END
+Exception-Handling Section(optional) -> EXCEPTION
+EXECUTE IMMEDIATE -> 
+&enter_number -> input from console
+User Variable -> variables are used to store data temporarily during the execution of a block. // DECLARE varaiable_name data_type;
+Bind/Host Variable ->
+Declaration -> VARIABLE variable_name datatype; 
+Initialization -> :variable_name := value;(in PL/SQL), EXEC :variable_name := value;(in SQL*Plus or DBCA (Database Configuration Assistant))
+Anchored Data Type -> Data type which we assign to a variable based on a database object. // DECLARE varaiable_name table_name.column_name%TYPE;
+Constants -> User defined Identifier whose value remains unchanged throughout the program. // DECLARE constant_name CONSTANT datatype(dw) := value;
+Control Statements -> which allows to control the execution flow of program depending on a condition.
+If statements -> If, then // if, then, else // if, then, elsif, else // End If.
+Case Statments -> Simple Case, Searched Case(Conditions).
+
+
+

@@ -1,0 +1,8 @@
+REACT + VITE
+To create only a react app -- npx create-react-app app_name
+To create react with vite build tool :- 
+ -- npm install -g create-vite     To run the app -- npm start
+ -- npm create vite@latest app_name    To run the app -- npm run dev
+Move to the new app -- cd app_name
+Install all the necessary packages --npm install
+The react app runs in the default port 5173, we can also custom our server port in vite.config.js -- server : { port : 4200}

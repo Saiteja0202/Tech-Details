@@ -1,0 +1,10 @@
+sign in with an account where the projects are present
+then select the project
+set the region (asia-south1)
+enable required APIs
+(before deploying, ready the JAR or WAR file)
+mvnw.cmd clean package -DskipTests
+gcloud init
+gcloud services enable run.googleapis.com  --- (enables Cloud Run API (serverless container execution))
+gcloud services enable cloudbuild.googleapis.com --  (enables Cloud Build API (builds and packages your code into a container))
+gcloud run deploy library-management-service --source . --region asia-south1 --allow-unauthenticated

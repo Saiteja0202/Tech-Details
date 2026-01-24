@@ -1,0 +1,31 @@
+Spring FrameWork -> Spring Core (DI ,IoC(HEART), AOP), Modules
+POM ->
+Spring Container -> DI, IoC, Beans, XML Config
+Inversion of Controller -> Losse Coupling
+Dependency Injection -> Constructor, Setter and Field Injection
+Configuration -> XML, Java-Based and Annotation Configuration
+Bean Factory ->
+Application Context ->
+Bean -> 
+XML Configuration File ->
+Java-Based ->
+Annotation -> 
+Auto Wiring -> ByTpye, ByName, @Qualifier
+Stereotype Annotations -> @Component, @Service, @Repository, @Controller, @Configuration
+Spring JDBC -> DriverManagerDataSource -> DriverClassName, url, username, password -> JDBCTemplate (dataSource)
+Spring ORM -> SessionFactory ->Session -> Transaction ->
+Spring MVC -> Client -> Front Controller (Dispatcher Servlet) -> HandlerMapper -> Controller -> Model and View -> Dispatcher Servlet -> 
+View Resolver (prefix, view, suffix) -> client 
+Spring AOP -> 
+Java Configuration ->
+Spring Boot ->
+JDBC ->
+ORM -> 
+Hibernate ->
+Data JPA ->
+Entity RelationShips ->
+CRUD Operations -> 
+REST APIs -> HTTP,Header, Method, Body, Request, Response, HTTP methods, Query & Path Parameters, Status Codes, JSON, Swagger
+MicroServices -> 
+SQL -> 
+
