@@ -18,6 +18,7 @@ Cardinality -> The maximum number of times an entity of an entity set participat
 Participation Constraint is applied to the entity participating in the relationship set. Total Participation, Partial Participation.
 
 
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 									PL/SQL
 ------------------------------------------------------------------------------------------------------------------------------------------------------------

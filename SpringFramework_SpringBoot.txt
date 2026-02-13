@@ -1,0 +1,164 @@
+								Spring FrameWork/SpringBoot
+
+Spring is a framework for building enterprise Java applications. It solves problems like heavy configuration, tight coupling, and boilerplate code. Write simple POJOs (Plain Old Java Objects), and let Spring handle wiring, lifecycle, and infrastructure. Instead of manually creating service objects, Spring manages them for you. Spring Framework is a lightweight, open-source framework for building enterprise Java applications. It provides infrastructure support for developing applications, focusing on dependency injection, aspect-oriented programming, and modularity. Its goal is to simplify Java development by handling boilerplate code and promoting loose coupling. Spring is widely used because it makes applications easier to test, maintain, and scale.
+
+Inversion of Control (IoC) ->It is a principle. Normally, classes control their dependencies (e.g., new Service() inside a controller). With IoC, the control is inverted: Spring creates and injects dependencies into your classes. This is done by the IoC Container (ApplicationContext). IoC is a design principle where the control of object creation and dependency management is inverted — instead of the application code instantiating objects directly, the Spring IoC container manages their lifecycle and dependencies. IoC means developers don’t need to manually construct or manage dependencies. The framework takes care of wiring objects together, which reduces coupling and improves flexibility.
+
+Dependency Injection (DI) -> One way to implement the IoC. DI is a way IoC works dependencies are injected into beans. It’s a design pattern where an object’s dependencies are provided externally (by the IoC container) rather than the object creating them itself. DI promotes loose coupling, testability, and maintainability.
+Constructor Injection → dependencies passed via constructor.
+Setter Injection → dependencies set via setter methods.
+Field Injection → dependencies injected directly into fields (via @Autowired).
+
+Spring Beans -> A bean is any object managed by the Spring container. Beans are instantiated, assembled, and managed by the container based on configuration (XML, annotations, or Java-based config). Beans are the building blocks of a Spring application. Every component (service, repository, controller) is typically a bean.
+XML (<bean> tags). -> Configure the db configuration in xml file -> Create a .xml file for a bean class(includes the mapping) -> create a DAO files for the db manipulation methods (CRUD) ->create a main class for IoC container.
+Annotations (@Component, @Service, @Repository).
+Java config (@Bean inside @Configuration).
+
+Bean Lifecycle :- Spring IoC started -> Bean Instantiated -> Dependency Injected -> Bean Initialization -> Bean Usage -> Bean Destruction.
+
+Scope -> The scope of a bean in Spring refers to the lifecycle and visibility of bean instances. For example, how many instances of a bean are created and managed by the Spring IoC container. Singleton is the default scope of a bean.
+Singleton Scope -> When a bean is configured to have a Singleton scope, Spring IoC container will create exactly one instance of the bean and will reuse this same instance every time the bean is requested (or injected) throughout the lifetime of the application.
+Prototype Scope -> When a bean is configured with Prototype scope, Spring IoC container will create a new instance of the bean each time it is requested or injected. Prototype-scoped beans are not shared.
+Request Scope -> When a bean is configured with Request scope, the Spring IoC container will create a new instance of 
+the bean for each HTTP request. Good for applications which maintain state or data specific to individual HTTP requests
+Session Scope ->
+Application Scope -> 
+
+Maven -> Apache Maven is a build automation and project management tool for Java (and other JVM languages). It standardizes project structure, manages dependencies, and automates builds, testing, packaging, and deployment. Unlike procedural tools (like Ant), Maven is declarative: you describe your project in a POM file, and Maven knows how to build it using predefined lifecycles.
+
+POM (Project Object Model) -> Haer of Maven, Central XML file (pom.xml) that defines Project metadata (name, version, packaging type), Dependencies(Managed via <dependencies>), Plugins(Extend Maven functionality ), Build configurations.
+Standard Directory Layout -> Maven enforces a Standard convention.
+
+Build Lifecycle :- Validate -> Compile -> Test -> Package -> Verify -> Install -> Deploy
+Profiles -> Allow different build configurations (dev, prod).
+
+Spring MVC is a web framework within the Spring ecosystem that follows the Model-View-Controller (MVC) design pattern. It separates:
+Model → application data and business logic
+View → presentation layer (UI)
+Controller → request handling and coordination
+
+Architecture & Request Flow :- Client Request(Browser sends HTTP request.) -> DispatcherServlet(Front controller that receives all requests.) -> Handler Mapping(Finds the right controller method.) -> Controller(Executes business logic, interacts with Model.) -> Model(Holds data to be displayed.) -> View Resolver(Chooses the correct view (JSP, Thymeleaf, etc.).) -> Response(View renders data and sends back to client.)
+
+Core Components :-
+DispatcherServlet -> Central request dispatcher.
+Controller (@Controller) → Handles requests, returns Model + View.
+Model (Model, ModelMap) → Stores data for the view.
+View → JSP, Thymeleaf, FreeMarker, etc.
+Handler Mapping → Maps URLs to controllers.
+View Resolver → Resolves logical view names to actual templates.
+
+Form Handling → @ModelAttribute, @RequestParam.
+Validation → JSR-303 annotations (@Valid).
+Exception Handling → @ControllerAdvice, @ExceptionHandler.
+Interceptors → Pre/post-processing of requests.
+REST Support → @RestController, JSON/XML responses.
+Internationalization (i18n) → Message bundles for multiple languages.
+File Uploads → MultipartResolver support.
+
+Data Access :- 
+Spring JDBC -> Direct JDBC API integration with Spring’s support classes. You write SQL queries manually; Spring provides JdbcTemplate to simplify boilerplate (connection, statement, result set handling).
+Hibernate -> ORM (Object-Relational Mapping) framework. Maps Java objects to database tables; manages persistence, caching, lazy loading, etc.
+Spring Data JPA -> Spring’s abstraction layer over JPA. Provides repository interfaces (JpaRepository, CrudRepository) with auto-generated queries.
+
+Spring Security :- It is a powerful framework for securing Java applications.
+Authentication: Verifying user identity. Who you are.
+Authorization: Controlling access to resources. What you can do.
+Protection: Against common attacks (CSRF, XSS, session fixation, etc.).
+JWT/OAuth2: Modern token-based security.
+
+
+Security Filters -> Spring Security uses a filter chain to intercept requests. Filters handle authentication, authorization, CSRF protection, etc.
+CSRF Protection → Prevents cross-site request forgery.
+Session Management → Controls concurrent sessions, session fixation.
+Password Encoding → BCryptPasswordEncoder for secure storage.
+Method Security → @Secured, @PreAuthorize, @PostAuthorize.
+OAuth2 / JWT → Secure REST APIs with tokens.
+Reactive Security → Works with Spring WebFlux for reactive apps.
+
+Exception Handling -> Centralized error handling with @ControllerAdvice.(Global Exception Handler)
+
+Spring Aspect-Oriented Programming (AOP) complements OOP by modularizing concerns that cut across multiple classes. Instead of duplicating code (e.g., logging in every method), you write it once in an Aspect and apply it wherever needed. In Spring, AOP is implemented using proxies and can be configured via annotations or XML.
+AspectJ is a powerful Aspect-Oriented Programming (AOP) framework for Java. It extends Java with constructs for defining cross-cutting concerns (like logging, security, transactions) separately from the main business logic, and then weaving them into the application at runtime or compile time.
+Aspect -> A module that encapsulates cross-cutting logic.
+Advice -> Action taken at a specific join point. Types: @Before, @After, @Around, @AfterReturning, @AfterThrowing.
+Join Point -> A point in program execution where advice can be applied.
+Pointcut -> Expression that selects join points.
+Weaving -> Linking aspects with target objects.
+
+Spring Cloud -> It is an extension of the Spring ecosystem designed to simplify the development of distributed systems. It provides ready-made solutions for common cloud patterns like service discovery, configuration management, load balancing, circuit breakers, routing, and distributed messaging. Instead of reinventing these mechanisms, you plug in Spring Cloud modules to handle them. 
+Service Discovery -> Services register themselves and discover others dynamically.
+Centralized Configuration -> Manage configs for all services in one place.
+Load Balancing -> Distribute requests across service instances.
+Circuit Breakers & Resilience -> Prevent cascading failures when services are down.
+Routing & API Gateway -> Route requests to appropriate services.
+Distributed Messaging -> Event-driven communication between services.
+Security & Tokens -> Handle authentication/authorization across services.
+Tracing & Monitoring -> Track requests across microservices.
+Feign -> Itis a declarative REST client.
+Architecture Flow :- Client Request(Hits API Gateway.) -> Gateway(Routes to appropriate microservice.) -> Service Discovery(Finds available instances.) -> Load Balancer(Distributes traffic.) -> Config Server(Supplies configuration values.) -> Circuit Breaker(Protects against failures.) -> Tracing/Monitoring (Logs and monitors request flow.)
+
+Spring Batch is a framework designed for batch processing — executing jobs that handle large volumes of data in bulk, often scheduled or triggered automatically.
+Common use cases :- Data migration between systems, ETL (Extract, Transform, Load) pipelines, Report generation, Processing logs, invoices, or payrolls, It’s optimized for high-volume, non-interactive, backend operations.
+
+Core Architecture Spring Batch has three main layers: 
+Application Layer → Your batch jobs and custom code.
+Core Layer → Runtime classes (Job, Step, JobLauncher, JobRepository).
+Infrastructure Layer → Common services (readers, writers, transaction management, retry, etc.).
+
+Job -> Represents the entire batch process.
+Step -> A phase in the job (read → process → write).
+JobLauncher -> Starts a job.
+JobRepository -> Stores metadata (job status, execution history).
+ItemReader -> Reads data (DB, file, queue).
+ItemProcessor -> Applies business logic/transformation.
+ItemWriter -> Writes processed data to target (DB, file, etc.).
+
+Workflow:- JobLauncher triggers a Job. -> Job executes multiple Steps. -> Each Step follows the read → process → write pattern. -> Metadata (success/failure, execution time) is stored in JobRepository. -> Jobs can be scheduled via Spring Scheduler or external tools (Quartz, Cron).
+
+Reactive Programming -> A paradigm where data flows asynchronously through publishers and subscribers. Instead of blocking threads waiting for responses, events are pushed when available. Based on the Reactive Streams specification.
+
+Core abstractions:
+Publisher → Emits data/events.
+Subscriber → Consumes data/events.
+Mono → Represents 0 or 1 result.
+Flux → Represents 0…N results (a stream).
+
+Spring WebFlux -> Introduced in Spring 5 as a reactive web framework. Built on Project Reactor (Spring’s reactive library). Fully non-blocking and asynchronous, allowing thousands of concurrent requests with fewer threads, High-throughput microservices, Streaming data, Real-time applications. Implements Reactive Streams.
+Two programming models :-
+Annotation-based (similar to Spring MVC with @RestController).
+Functional routing (using RouterFunction and HandlerFunction).
+
+Caching with @Cacheable -> Store frequently accessed data in memory so repeated calls don’t hit the database or external service.
+Spring Cache Abstraction :- Provides annotations like : @Cacheable → caches method results. @CacheEvict → removes entries from cache. @CachePut → updates cache without skipping method execution.
+Providers :- Redis → distributed, in-memory cache with persistence and pub/sub features. Great for microservices. EhCache → local, in-process cache. Lightweight and fast for single-node apps.
+
+Async Processing with @Async -> Run tasks in the background without blocking the main thread.
+Spring Support :- Annotate methods with @Async. Return types: void, Future<T>, CompletableFuture<T>.
+Use Cases :- Sending emails, Logging/auditing, Calling external APIs in parallel.
+
+Spring Actuator: Health checks, metrics, info endpoints. Provides endpoints for monitoring and management.
+
+Unit Testing (JUnit + Mockito) -> Test individual components (methods, classes) in isolation. Ensure business logic works correctly without external dependencies.
+Tools :- JUnit 5 → Standard testing framework for Java. Mockito → Mocking framework to simulate dependencies.
+Integration Testing (@SpringBootTest) -> Test how multiple layers (controller, service, repository) work together. Ensures the application context loads and beans are wired correctly.
+
+SpringBoot -> Built on top of Spring Framework. Simplify setup and development of Spring applications. Provides auto-configuration, starter dependencies, and an embedded server (Tomcat/Jetty). Removes the need for heavy XML configuration.
+
+Spring Boot Starters -> Predefined dependency bundles for common use cases.
+spring-boot-starter-web → REST APIs.
+spring-boot-starter-data-jpa → Database access.
+spring-boot-starter-security → Authentication/authorization.
+
+Spring Boot Auto-Configuration -> Automatically configures beans based on classpath dependencies.
+
+Spring Boot Configuration -> application.properties or application.yml used for runtime settings. Configure DB, SMTP, logging, feature flags, etc. Profiles allow environment-specific configs (dev, test, prod).
+
+Spring Boot REST API -> Use @RestController and mapping annotations (@GetMapping, @PostMapping). JSON serialization handled automatically by Jackson.
+
+Spring Boot Data Access -> Spring Data JPA Simplifies CRUD operations. Interfaces extending JpaRepository.
+
+Spring Boot Security -> Provides authentication & authorization. Supports form login, JWT, OAuth2. Configurable via WebSecurityConfigurerAdapter or new SecurityFilterChain.
+
+Spring Boot Testing -> @SpringBootTest for integration tests. @WebMvcTest for controller tests. Works with JUnit, Mockito, Testcontainers.
+
+Spring Boot Deployment -> Package as JAR/WAR. Run standalone (java -jar app.jar). Dockerize for containerized deployment. Deploy to Kubernetes for scaling.

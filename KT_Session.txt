@@ -1,0 +1,318 @@
+KT -> 15-10-2025 -> Arijit
+
+Azure Board -> AZDO(Azure Devops), ART(Agile release trainee) -> ACE(Annuity Customer Experience)-> Boards (RIS Administration -> Benefits, Controls, Payments) (RIS Annuitatnt Experience -> RIS Correspondance)
+controls -> Establish, Risk Prevention in code
+Issue Payment Batch release bulk payments of annutants 
+Immediate pay -> single payment
+Differed pay -> installment
+
+Regions -> INTA, INTG, Dev A, Dev B(I), QA
+UI -> DB - relationship
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+KT -> 16-10-2025 -> Ankit
+
+Plan Sponsor -> company , they provide a plan to there employees
+contract -> metlife & plan sponsor
+plan -> Plan benefit type (Herman Miller.INC)
+Data Loading -> File loading
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+KT -> 24-11-2025
+
+dev regions - for code traversing, experiments
+int regions - for testing
+ACE -Annuity Customer Experience
+Profile -> Annuitant all details
+Alternate Id - Social Security Number(SSN) - unique id's for an annuitant
+Links To -> Relations, Contacts of, Participant is a Beneficiary of
+Contracts -> 9digit Group ID -> Plans -> Annuitants
+Contracts & Certs -> Contract details(A) -> Beneficiary -> An Annuitant can have multiple contracts
+Benefits -> Benefit segments -- Payment setup -> Payment streams -> Payment Estimate & Preview -- Payment History -- OverPayments -> Credit Corrections
+Issue payment batch -> releases all the payments of all annuitants (same for all ?)
+V3(ViTech) Product :- Benefits admin platform
+CloseOut ->
+Structured Settlement -> Claiment & Defendent
+IIA(Income Annuity) -> 
+CGA ->
+Lottery -> 
+Correspondence -> Sending out mails, letters.....
+Integration -> DownStream(V3 -> Application) & UpStream(Feed from Application -> V3), Reports
+Scheduled Batchouts -> Automated process for bulk payments
+Work Flow -> 
+Legacy Products -> Outdated -- GPAY -> takes cares of all payments -- PCTS -> Administration of the Annuitants profile 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+KT -> 24-11-2025
+
+Applicant Status -> Living to Deceased
+Issue Payment Batch -> changed the next processing date
+COLA -> Cost of Living Adjustment (COLA Increase)
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+KT -> 25-11-2025
+
+V3 Product -> benadminsystem , ace_product_code(client code)
+from develop_current_month branch -> create a new branch with feature
+create a local folder -> navigate into that folder -> open in cmd -> git clone [url] -b [feature_branch_name]
+after changes success -> open gui here in the branch folder -> verify the changes -> stage the changes -> note a message for commit and commit the changes 
+-> push -> create a pull request from the feature to develop branch
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+AI-Copilot Summary 08-01-2026
+
+
+## 🔹 Employee Benefits
+Employee benefits are extra perks employers give beyond salary to improve security and living standards.
+
+- **Example**: Imagine your company pays for your health insurance and gives you paid vacation. That’s an employee benefit.
+
+---
+
+## 🔹 Welfare Benefit Plan
+Covers non‑retirement benefits like health, training, or legal help.
+
+- **Medical care** → Company pays for your hospital bills.  
+- **Unemployment benefits** → If you lose your job, you get temporary financial support.  
+- **Day care centers** → Employer provides childcare so parents can work.  
+
+👉 Think of it as “life support” benefits while you’re working.
+
+---
+
+## 🔹 Pension Benefit Plan
+Covers retirement income. Defined by **ERISA (Employee Retirement Income Security Act)**.
+
+- **Example**: Your employer sets up a pension plan so when you retire at 65, you get monthly payments.
+
+---
+
+## 🔹 Two Types of Pension Plans
+### 1. Defined Contribution Plan
+- Employer contributes a fixed amount or percentage into your account.  
+- Your retirement depends on how investments perform.  
+- **Example**: Mary earns $45,000. Employer contributes 5% = $2,250 into her retirement account. If investments grow, she gets more; if they lose value, she gets less.
+
+👉 Risk is on the employee.
+
+---
+
+### 2. Defined Benefit Plan
+- Employer promises a fixed retirement income (like a monthly pension).  
+- Payments usually last until death.  
+- **Example**: Employer promises $2,000/month after retirement at age 65. No matter how investments perform, Mary gets $2,000.
+
+👉 Risk is on the employer. Protected by PBGC (Pension Benefit Guaranty Corporation).
+
+---
+
+## 🔹 Contracts
+### Participating Contract
+Employer pays premiums regularly to keep annuity active.  
+- **Example**: Employer pays $10M upfront, then adds more funds over time to cover retirees.
+
+### Non‑Participating Contract
+Employer pays a single lump sum.  
+- **Example**: Employer pays $5M once to cover all employees’ future pensions.
+
+---
+
+## 🔹 Retirement Provisions
+- **Normal Retirement** → Usually age 65.  
+- **Early Retirement** → Retire earlier (like 55), but get smaller benefits.  
+- **Delayed Retirement** → Retire later (like 70), get larger benefits.  
+
+👉 Example: Retiring at 55 gives smaller monthly checks; retiring at 70 gives bigger ones.
+
+---
+
+## 🔹 Forms of Annuity
+An annuity = regular payments after retirement.
+
+- **Straight Life Annuity** → Payments stop when you die.  
+- **Term Certain Annuity** → Payments for a fixed period (e.g., 10 years), even if you die earlier.  
+- **Life with Refund Annuity** → If you die early, your family gets a refund of unused money.  
+- **Joint & Survivor Annuity** → Payments continue to your spouse after your death.  
+
+👉 Example: If you choose Joint & Survivor, you get $1,500/month. After you die, your spouse continues to get $750/month.
+
+---
+
+## 🔹 Benefit Provisions
+- **Pre‑Retirement Spouse Death Benefit (PRSDB)** → If you die before retirement, spouse gets benefits.  
+- **Post‑Retirement Survivor Benefit (PSSDB)** → If you die after retirement, spouse gets part of your pension.  
+- **Cash‑Out** → If pension is too small, you get one lump sum instead of monthly payments.  
+- **Lump‑Sum** → You choose to get all money at once.  
+- **Flat Death Benefit** → Fixed amount paid to beneficiary after death (e.g., $5,000).
+
+---
+
+## 🔹 Distribution & Taxation
+- **QDRO (Qualified Domestic Relations Order)** → Court order to split pension benefits (e.g., divorce, child support).  
+- **Federal & State Tax** → Pension payments are taxable.  
+- **Rollover** → Move pension money into another retirement account (like IRA) to keep tax benefits.  
+
+👉 Example: You retire and roll over your pension into an IRA to avoid paying taxes immediately.
+
+---
+
+## 🔹 Other Retirement Accounts
+- **IRA (Individual Retirement Account)** → Personal retirement savings with tax benefits.  
+- **SEP (Simplified Employee Pension)** → Retirement plan for small businesses/self‑employed.  
+
+---
+
+## 🔹 Advantages & Disadvantages
+### Defined Benefit (DB)
+- ✅ Guaranteed lifetime income.  
+- ❌ Less portable if you change jobs.  
+
+### Defined Contribution (DC)
+- ✅ Portable, flexible.  
+- ❌ Risk is on employee (investments may fail).
+
+---
+
+## ✅ Beginner Summary
+- **Welfare Benefits** = support during work life (health, vacation, training).  
+- **Pension Benefits** = support after retirement (monthly income or lump sum).  
+- **Defined Contribution** = employer deposits money, you bear risk.  
+- **Defined Benefit** = employer promises fixed pension, employer bears risk.  
+- **Annuities** = different payment styles (life, joint, refund, lump sum).  
+- **Contracts** = how employer funds pensions (ongoing vs one‑time).  
+- **Taxes & Rollovers** = pensions are taxable, but rollovers delay taxes.  
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+AI Copilot Summary for V3 Product  09-01-2026
+
+
+
+# 🧾 Beginner-Friendly Explanation of V3 Functional Overview
+
+## 🌐 What is V3?
+- **V3** is a software product built by **ViTech**, customized for **MetLife**.
+- It’s used for **group benefits administration** — basically managing pensions, annuities, and insurance benefits for groups of people (like employees in a company).
+- Think of it like a **big dashboard + database** that keeps track of who gets what benefits, when, and how.
+
+---
+
+## 📦 Product Groups in V3
+V3 handles three main types of products:
+
+1. **Closeouts**  
+   - When a company stops its pension plan, they buy a contract from MetLife to guarantee employees still get their pensions.  
+   - Two types:
+     - **Non-Participating**: Company pays one big lump sum → MetLife takes full responsibility.  
+     - **Participating**: Company pays lump sum + ongoing premiums → they share financial risks/benefits with MetLife.
+
+2. **Structured Settlements (SS, CGA & Lotteries)**  
+   - Used when someone wins a court case or lottery. Instead of one big payout, they get **regular payments over time**.  
+   - Example: A person injured in an accident gets monthly payments for medical expenses instead of one lump sum.
+
+3. **Legacy Products**  
+   - Old products MetLife no longer sells but still has to manage because customers are still entitled to benefits.  
+   - Includes products from companies MetLife acquired (like NEF, MICC, GenAm).
+
+---
+
+## 💡 Why V3 is Useful
+- Combines data from many old systems into **one modern Oracle database**.  
+- Makes processes faster, cheaper, and more transparent.  
+- Improves customer service (easy to find info in one place).  
+- Helps MetLife expand into new markets.
+
+---
+
+## 👥 Business Entities in V3
+V3 organizes people and organizations into **entities**:
+
+- **Individual Class**  
+  - **Person**: Any participant (employee, broker, consultant, etc.).  
+  - **Member**: Employee who earns benefits.  
+  - **Dependent**: Family member who gets benefits because of the member.  
+  - **Beneficiary**: Person who receives benefits if the member dies.
+
+- **Institution Class**  
+  - **Plan Sponsor**: Employer or organization funding the benefits.  
+  - **Other Org**: Banks, law firms, lottery companies, etc.
+
+So V3 can track **who is involved** (employee, dependent, broker, sponsor) and their **roles**.
+
+---
+
+## 🔍 Searching in V3
+Two ways to find information:
+
+1. **World Search**  
+   - Simple search across many fields (like Google search).  
+   - Example: Search by SSN, name, tax ID, broker code.
+
+2. **Advanced Search**  
+   - More specific forms:
+     - **Multi Search**: Search by SSN, certificate number, etc.  
+     - **Factor Co and Name Search**: Search by factoring company and last name.
+
+---
+
+## 👨‍👩‍👧 Entity Examples
+- **Member**: Employee who earns pension.  
+- **Dependent**: Spouse or child eligible for benefits.  
+- **Beneficiary**: Person who gets benefits if member dies.  
+- **Plan Sponsor**: Employer who pays premiums.  
+- **Broker**: Middleman who helps set up contracts.
+
+---
+
+## ⚖️ Structured Settlements
+- **Definition**: A financial arrangement where payments are spread over time instead of one lump sum.  
+- **Why**: Helps injured people or lottery winners manage money better.  
+- **How it works**:
+  - Insurer buys an annuity (guaranteed payment plan) from a life insurance company.  
+  - Payments match the settlement agreement.  
+  - Can be **unassigned** (insurer keeps obligation) or **assigned** (insurer transfers obligation to another company).
+
+---
+
+## 🎁 Special Settlement Types
+- **Multi-Life Structured Settlement**: Covers not just the claimant but also family members.  
+- **Charitable Gift Annuity (CGA)**: Donor gives money to charity → charity buys annuity → donor gets lifetime payouts.  
+- **Lottery Setup**: Lottery company hires insurer to pay winners over time instead of lump sum.
+
+---
+
+## 🧑‍💼 Broker Processes
+- **Add Broker**: Enter broker info in system.  
+- **Verify Broker**: Check broker license validity.  
+- **Trigger Broker Commission**: Pay broker their commission.  
+- **Manual Lock-in Number**: Generate workflow ID for broker verification.
+
+---
+
+## 🚀 Case Activation
+- Final step to start payments.  
+- After premiums are received and verified, the case is activated.  
+- Generates certification documents.  
+- For structured settlements, a **Good Order process** ensures everything is correct before payments begin.
+
+---
+
+# 📝 Summary for Beginners
+- **V3 = MetLife’s benefits management system.**
+- Handles **Closeouts, Structured Settlements, Legacy Products.**
+- Organizes people/entities into **Members, Dependents, Beneficiaries, Plan Sponsors, Brokers.**
+- Provides **search tools** to find records quickly.
+- Supports **special financial setups** like structured settlements, charitable annuities, and lottery payouts.
+- Includes **broker workflows** and **case activation** to ensure payments are accurate and legal.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+KT - 
+
+8058_ace_product_code
+8058_v3benadminsystem
+
+

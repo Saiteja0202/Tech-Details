@@ -147,9 +147,9 @@ Java 7	2011		Try-with-resources, Diamond operator, NIO.2
 Java 8	2014		Lambda expressions, Streams API, Optional, Date-Time API
 Java 9	2017		Module System (Project Jigsaw), JShell
 Java 10	2018		Local-variable type inference (var)
-Java 11	2018		LTS release, HTTP Client API(old -> HttpURLConnection), String methods
+Java 11	2018		LTS release, HTTP Client API(old -> HttpURLConnection), String methods(isBlank(), strip(), stripLeading(), stripTrailing(), 				repeat(), lines())
 Java 12–16 2019		Switch expressions, Text blocks, Records, Pattern Matching (preview)
-Java 17	2021		LTS release, Sealed Classes, Enhanced Pseudo-Random Number Generators
+Java 17	2021		LTS release, Sealed Classes(Sealed classes and interfaces restrict which other classes or interfaces may extend or implement them. 			This gives developers fine-grained control over inheritance), Enhanced Pseudo-Random Number Generators
 Java 18–20 2022		Virtual Threads (preview), Structured Concurrency (incubator), Scoped Values
-Java 21	2023		LTS release, Sequenced Collections, Record Patterns, Virtual Threads
+Java 21	2023		LTS release, Sequenced Collections(Encounter order is guaranteed, Access the first and last elements, Add/remove elements at either 			end , Obtain a reversed view of the collection), Record Patterns, Virtual Threads
 Java 22	2024		String Templates, Stream Gatherers, Implicit Classes, Class-File API
