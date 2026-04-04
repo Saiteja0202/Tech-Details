@@ -9,7 +9,7 @@ Class Loaders -> Its a subsystem dynamically loads classes into memory. Bootstra
 Java Libraries -> Java APIs are collections of prewritten classes,interfaces and methods are organized into packages. -> import java.util.ArrayList;
 java.lang -> core language package -> automatically imported in every program 
 java.util -> backbone of java utilities -> Collections, Implementations, Date and Time Utilities, Streams , Functions
-java.io -> traditional, Stream based Input/Outpu/t // java.nio -> advanced for buffer oriented (Both allows programs to read data and write data)
+java.io -> traditional, Stream based Input/Output  java.nio -> advanced for buffer oriented (Both allows programs to read data and write data)
 java.net -> Networking package (It allows programs to communicate over networks) 
 java.time -> Date and Time (intro java 8) , Immutable and Thread-Safe
 java.math -> 
@@ -44,20 +44,20 @@ Abstraction -> Hides implementation details and shows only essential features.
 Abstract Class -> An abstract class is a class that cannot be instantiated and may contain both abstract methods (without implementation) and concrete methods (with implementation).
 Interface -> An interface is a contract that defines a set of methods a class must implement. It promotes multiple inheritance and loose coupling.
 Polymorphism -> Means "many forms". Enables one interface to be used for different data types. It is in two types.
-OverLoading(Compile Time) -> Same method name with different parameter lists. 
-OverRiding(Run Time) -> Subclass provides a specific implementation of a method already defined in its superclass. The return type is dynamic.
+OverLoading(Compile Time) -> Same method name with different parameter lists. Overloading can also occur with varargs, autoboxing, and type promotion.(static binding)
+OverRiding(Run Time) -> Subclass provides a specific implementation of a method already defined in its superclass. The return type is dynamic. Method Overriding -> Instance methods redefined in subclass. (dyanmic binding)
 Association -> General relationship between two classes (e.g., Teacher–Student).
 Aggregation -> “Has‑a” relationship, weaker form (e.g., Library has Books).
 Composition -> Strong “has‑a” relationship, lifecycle tied (e.g., House has Rooms).
-Method Overriding -> Instance methods redefined in subclass.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 Final Keyword-> to declare the constants and prevent modification. Variables(cannot modify), Method(cannot overridden), Class(cannot extend)
 String Functions -> length() Returns string length, charAt(int index) Gets character at index, substring(int start, int end) Extracts substring, equals(String other) Compares content, toUpperCase() / toLowerCase(), trim() Removes leading/trailing spaces, split(String regex) Splits string by pattern, replace(char old, char new) Replaces characters.
 Comments -> Single-line: // This is a comment, Multi-line: /* This is a block comment */, Documentation: /** This is a Javadoc comment */
-Default Values -> int, byte, short, long = 0, float = 0.0f, double = 0.0d, char = '\u0000' (null character), boolean = false, Object references = null
+Default Values -> int, byte, short = 0, long = 0L, float = 0.0f, double = 0.0d, char = '\u0000' (null character), boolean = false, Object references = null
 Enum(Collection of Constants) -> is a special Java type used to define a fixed set of constants.
 Inner Class -> An inner class is a class defined within another class.
-Array -> Array Functions -> equals, fill, sort, toString, copyOf
+Array -> An array is a data structure that stores a fixed-size sequence of elements of the same type, elements are stored in contiguous memory locations.
+Array Functions -> equals, fill, sort, toString, copyOf
 Math Functions -> abs, min, max, round, ceil, floor, random, pow, sqrt
 Debugging -> Debugging is the process of identifying and fixing errors or unexpected behavior in code. Debuggers connect to JVM using Java Debug Wire Protocol (JDWP) to inspect threads, variables, and call stacks.
 Time Types -> Date, Calendar, Time Zones
@@ -78,7 +78,7 @@ default capacity 10. ArrayList resizes its internal array (grow() method). trimT
 LinkedList -> is a doubly-linked list implementation of the List and Deque interfaces. It allows nulls, duplicates, and maintains insertion order. Each element is stored in a Node containing: Data, Reference to previous node, Reference to next node.
 doubly-linked list -> means each node in the list maintains references to both its previous and next nodes, allowing efficient bidirectional traversal, insertions, and deletions.
 Vector -> is a class, Thread-safe: All methods are synchronized. Resizable - Automatically grows as elements are added. Maintains insertion order. Allows duplicates and nulls. Implements: List, RandomAccess, Cloneable, Serializable.
-Stack(LILO) -> is a class, LIFO structure - Last element added is the first to be removed. Thread-safe - Inherits synchronization from Vector. Extends Vector: Inherits all methods of Vector. push(), pop(), peek(), empty(), search().
+Stack(LIFO) -> is a class, LIFO structure - Last element added is the first to be removed. Thread-safe - Inherits synchronization from Vector. Extends Vector: Inherits all methods of Vector. push(), pop(), peek(), empty(), search().
 Queue(FIFO) -> FIFO ordering, Used for task scheduling, buffering, and request handling, Allows duplicates, Can be bounded or unbounded.
 Deque(Double-Ended Queue)(FIFO & LILO) -> allows insertion and removal from both ends, Can act as stack or queue, More flexible than Queue, No capacity restrictions in most implementations
 PriorityQueue -> A PriorityQueue is a special type of queue where elements are ordered by priority, not by insertion time. It uses a binary heap internally. Default ordering is natural (e.g., ascending for numbers)
@@ -121,6 +121,7 @@ Optional -> Its wrap a value that might be null, of(), ofNullabel(), empty()
 MultiThreading -> means running multiple threads (smaller units of a process) simultaneously.Each thread runs independently but shares the same memory 
 space, allowing efficient communication and resource sharing. -> Thread Class, Runnable Interface, -> start(), run(), sleep(), join(), interrupt(), yield(),
 wait(), notify(), notifyAll()
+States :- New, Runnable, Blocked, Waiting, Timed Waiting, Terminated.
 Garbage Collection -> JVM automatically frees memory by removing objects no longer referenced. Uses algorithms like Mark‑and‑Sweep (marks reachable objects, sweeps unreferenced.) Generational GC (separates young/old objects for efficiency.) Runs in background, improves memory management, but can cause pauses.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 Reflection API -> Reflection allows Java code to inspect and manipulate classes, methods, fields, and constructors at runtime, even if they are private. 
@@ -132,7 +133,7 @@ Serialization & Deserialization
 Cloning Mechanism -> Creating a copy of an object.
 Assertion (assert) -> Used for development-time checks. Not recommended for production.
 Java Logging APIs -> for Debugging, Monitoring, Production troubleshooting. Built-in : java.util.logging. Common external : Log4j, Logback, SLF4J.
-Java Networking -> Missing concepts : Sockets, ServerSocket, DatagramSocket (UDP), URLConnection, HTTP Client (Java 11+). Used in : Servers, APIs, Microservices.
+Java Networking ->  Sockets, ServerSocket, DatagramSocket (UDP), URLConnection, HTTP Client (Java 11+). Used in : Servers, APIs, Microservices.
 Record Classes (Java 16+) –> they are Immutable data carriers. Automatically provides : constructor, getters, equals, hashCode, toString.
 Sealed Classes -> Restrict which classes can extend a class.Improves : Security, Exhaustive pattern matching.
 Design Patterns -> Design patterns are structured approaches (templates/blueprints) that solve recurring problems in software design. Singleton → one instance, global access. Factory → centralized object creation. Builder → step-by-step construction. Observer → event-driven notifications. Strategy → interchangeable algorithms.
