@@ -17,16 +17,16 @@ java.sql -> Provides APIs for database connectivity using JDBC, Connection, Stat
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 public static void main(){} -> access modifier, no object needed, no return type, entry point
 Static Members -> Variables(For all instance in a class), Methods(No need for object), Class(used for nested classes), Blocks(runs once when class loaded {}, encloses in {} braces)
-Non-Static Memebers -> Variables(To a particular object), Methods(Need object), Class(default), Constructor(intilaization of objects)
+Non-Static Members -> Variables(To a particular object), Methods(Need object), Class(default), Constructor(initialization of objects)
 Static vs Non-Static
 This -> Access instance variable(this.var),Call another constructor(this(args)),Pass current object(method(this)), Return current object(return this)
 Call current class method(this.method()), Print object reference(System.out.println(this)), Refer to outer class in inner(Outer.this)
 Data Types -> Primitive and Non-Primitive (Reference)
 Type Casting -> Implicit(Lower -> Higher) and Explicit(Higher -> Lower)
 Identifiers -> names are used to identify the variables, methods, classes and objects , JVM maps the identifiers to memory address while compilation
-Wrapper Classes -> objects for primitives, Auto Boxing(Primitive -> Wrapper) & UnBoxing(Wrappper -> Primitive)
+Wrapper Classes -> objects for primitives, Auto Boxing(Primitive -> Wrapper) & UnBoxing (Wrapper -> Primitive)
 Operators and Assignments
-Flow Control Statements -> if,else if, else (JVM evaluates conditions top-down.), switch(Jump tables / Lookup tables to quickly select the matching case)
+Flow Control Statements -> if, else if, else (JVM evaluates conditions top-down.), switch(Jump tables / Lookup tables to quickly select the matching case)
 Loops(repeat a block of code multiple times) -> for(Count-Controlled Iteration), while(Entry Controlled)(Condition-Controlled Iteration) -> do-while (Exit Controlled)
 Methods -> Specific task -> Instance Method, Static Method, Void Method, Return Method, Parameterized Method, Method Overloading
 Arrays -> object in Java that holds a fixed number of elements of the same type.
