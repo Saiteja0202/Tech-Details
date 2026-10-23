@@ -1,0 +1,19 @@
+PL/SQL, which stands for Procedural Language extensions to the Structured Query Language (SQL).
+Blocks -> Anonymous Blocks and Named Blocks
+Declaration Section -> DECLARE
+Executable Section -> BEGIN - END
+Exception-Handling Section(optional) -> EXCEPTION
+EXECUTE IMMEDIATE -> 
+&enter_number -> input from console
+User Variable -> variables are used to store data temporarily during the execution of a block. // DECLARE varaiable_name data_type;
+Bind/Host Variable ->
+Declaration -> VARIABLE variable_name datatype; 
+Initialization -> :variable_name := value;(in PL/SQL), EXEC :variable_name := value;(in SQL*Plus or DBCA (Database Configuration Assistant))
+Anchored Data Type -> Data type which we assign to a variable based on a database object. // DECLARE varaiable_name table_name.column_name%TYPE;
+Constants -> User defined Identifier whose value remains unchanged throughout the program. // DECLARE constant_name CONSTANT datatype(dw) := value;
+Control Statements -> which allows to control the execution flow of program depending on a condition.
+If statements -> If, then // if, then, else // if, then, elsif, else // End If.
+Case Statments -> Simple Case, Searched Case(Conditions).
+
+
+

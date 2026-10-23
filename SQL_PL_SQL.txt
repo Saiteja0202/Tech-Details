@@ -1,0 +1,101 @@
+									DBMS
+DBMS (Database Management System) is a software system that manages, stores, and retrieves data efficiently in a structured format. DBMS acts as a bridge between a central database and multiple clients including apps and users.
+
+Relational Database Management System (RDBMS), NoSQL DBMS, Object-Oriented DBMS (OODBMS), Hierarchical Database,  Network Database, Cloud-Based Database.
+
+Database languages -> are specialized sets of commands and instructions used to define, manipulate and control data within a database.
+Data Definition Language(DDL) -> which deals with database schemas and descriptions, of how the data should reside in the database.
+Data Manipulation Language (DML) -> focuses on manipulating the data stored in the database, enabling users to retrieve, add, update and delete data.
+Data Control Language(DCL) -> commands manage access permissions, ensuring data security by controlling who can perform certain actions on the database.
+Transaction COntrol Language(TCL) -> commands oversee transactional data to maintain consistency, reliability and atomicity.
+Data Query Language(DQL) -> is a subset of SQL used to retrieve data from a database without modifying it.
+
+A DBMS architecture defines how users interact with the database to read, write, or update information.
+1-tier, 2-tier, 3-tier Architecture
+
+Entity-Relationship Model (ER Model) is a conceptual model for designing a database. This model represents the logical structure of a database, including entities, their attributes, and relationships between them. ER diagrams represent the E-R model in a database, making them easy to convert into relations (tables).
+Entity -> represents a real-world object, concept or thing about which data is stored in a database. It act as a building block of a database. Tables in relational database represent these entities. Strong Entity (primary key), Weak Entity(no primary key).
+Attributes -> are the properties that define the entity type. Key Attribute(Primary key), Composite Attribute(composed of many other attributes), Multivalued Attribute(an attribute can have multiple values), Derived Attribute(An attribute that can be derived from other attributes of the entity type).
+Relationship Type represents the association between entity types.
+
+Degree of a Relationship Set -> The number of different entity sets participating in a relationship set. Unary/Recursive Relationship, Binary Relationship,
+Ternary Relationship, N-ary Relationship.
+
+Cardinality -> The maximum number of times an entity of an entity set participates in a relationship set. One-to-One, One-to-Many, Many-to-One, Many-to-Many
+Participation Constraint is applied to the entity participating in the relationship set. Total Participation, Partial Participation.
+
+Normalization is the process of organizing data in a relational database to reduce redundancy and improve data integrity. It involves splitting tables and defining relationships so that data is stored efficiently.Eliminate duplicate data. Prevent anomalies (insert, update, delete). Ensure data dependencies make sense.
+
+Denormalization is the opposite of normalization. It introduces redundancy intentionally to improve query performance.
+First Normal Form (1NF) Rule : Each column must contain atomic (indivisible) values. No repeating groups or arrays. (Subjects(Physics, Chemistry, Biology)  -> Subject(English))
+Second Normal Form (2NF) Rule: Must be in 1NF, and all non-key attributes must depend on the whole primary key (no partial dependency). Order(OrderID, ProductID, ProductName) -> Order(OrderID, ProductID)
+Third Normal Form (3NF) Rule: Must be in 2NF, and no transitive dependency (non-key attributes should not depend on other non-key attributes).
+Boyce-Codd Normal Form (BCNF) Rule: Stronger than 3NF. For every functional dependency (X → Y), X must be a superkey.
+Fourth Normal Form (4NF) Rule: Must be in BCNF, and no multi-valued dependencies. Student(ID, Hobby, Language) -> StudentHobby(ID, Hobby) StudentLanguage(ID, Language)
+Fifth Normal Form (5NF) Rule: Must be in 4NF, and no join dependency (data should not be reconstructible only by joining multiple tables).
+
+Primary Key :- A column (or set of columns) that uniquely identifies each row in a table. Cannot contain NULL.
+Foreign Key :- A column that establishes a relationship between two tables. It references the primary key of another table.
+Candidate Key :- Any column(s) that can uniquely identify a row. A table can have multiple candidate keys.
+Alternate Key :- Candidate keys that are not chosen as the primary key.
+
+Constraints :- 
+NOT NULL -> Ensures a column cannot have NULL values.
+UNIQUE -> Ensures all values in a column are distinct.
+CHECK -> Ensures values meet a condition.
+DEFAULT -> Assigns a default value if none is provided.
+FOREIGN KEY -> Enforces referential integrity between tables.
+PRIMARY KEY -> Ensures each row is uniquely identifiable.
+
+Index -> An index in SQL is a special data structure (like a lookup table) that helps the database engine find rows faster without scanning the entire table. Think of it like the index in a book: instead of reading every page, you jump directly to the page number. Indexes speed up queries (SELECT, JOIN, WHERE, ORDER BY) but may slow down INSERT/UPDATE because the index also needs updating.
+
+Transactions -> A transaction is a logical unit of work in a database. It groups multiple operations into one, ensuring they either all succeed or all fail.
+
+ACID Properties :- 
+Atomicity -> All operations in a transaction are executed as a single unit. Either all succeed or none succeed.
+Consistency -> A transaction brings the database from one valid state to another valid state.
+Isolation -> Transactions execute independently, even if run concurrently. Prevents dirty reads, non-repeatable reads, and phantom reads.
+Durability -> Once a transaction is committed, changes are permanent, even if the system crashes.
+
+Concurrency Control -> Ensures correct results when multiple users access DB simultaneously. Techniques: Locking (shared/exclusive), Two-phase locking, Timestamp ordering, Multiversion concurrency control (MVCC).
+
+Deadlocks -> Occur when two transactions wait indefinitely for each other’s locks. Prevention, detection, and recovery strategies.
+
+Distributed Database System (DDBS) -> is a database that is spread across multiple physical locations but appears to users as a single logical database. Instead of storing all data in one central server, the system distributes it across different sites connected via a network.
+
+Database Security -> Authentication, authorization, encryption. SQL injection prevention. Role-based access control.
+
+Backup & Recovery -> Ensures data safety in case of failure. Techniques: Full backup, incremental backup, checkpoints, log-based recovery.
+
+Data Warehouse -> is a specialized system designed for collecting, storing, and managing large volumes of data from multiple sources in a centralized repository. Unlike operational databases (which handle day-to-day transactions), a data warehouse is optimized for querying, reporting, and analysis to support business intelligence and decision-making.
+
+NoSQL database (short for “Not Only SQL”) -> is a type of database designed to handle large volumes of unstructured, semi-structured, or rapidly changing data. Unlike traditional relational databases (SQL), which rely on fixed schemas and tables, NoSQL databases offer flexible schemas, horizontal scalability, and high performance for modern applications.
+Types: Key-Value (Redis), Document (MongoDB), Column-family (Cassandra), Graph (Neo4j).
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+									SQL
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+									PL/SQL
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+PL/SQL, which stands for Procedural Language extensions to the Structured Query Language (SQL).
+Blocks -> Anonymous Blocks and Named Blocks
+Declaration Section -> DECLARE
+Executable Section -> BEGIN - END
+Exception-Handling Section(optional) -> EXCEPTION
+EXECUTE IMMEDIATE -> 
+&enter_number -> input from console
+User Variable -> variables are used to store data temporarily during the execution of a block. // DECLARE varaiable_name data_type;
+Bind/Host Variable ->
+Declaration -> VARIABLE variable_name datatype; 
+Initialization -> :variable_name := value;(in PL/SQL), EXEC :variable_name := value;(in SQL*Plus or DBCA (Database Configuration Assistant))
+Anchored Data Type -> Data type which we assign to a variable based on a database object. // DECLARE varaiable_name table_name.column_name%TYPE;
+Constants -> User defined Identifier whose value remains unchanged throughout the program. // DECLARE constant_name CONSTANT datatype(dw) := value;
+Control Statements -> which allows to control the execution flow of program depending on a condition.
+If statements -> If, then // if, then, else // if, then, elsif, else // End If.
+Case Statments -> Simple Case, Searched Case(Conditions).
+
+
+
